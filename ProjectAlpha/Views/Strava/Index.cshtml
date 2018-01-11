@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjectAlpha.App_Code.Models.StravaModel>
+@{
+    // A surfaceController is used to render a recurring piece with sepperated controller logic on a page. Like a form a listing or whatever.
+    // If you want to replace a full page, use an mvc controller.
+    // This piece and its controller get called in the Testpage (with the routing being done by umbraco)
+//Layout = null;
+//ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    @* Can't do this because Your apid return an Ienumerable that you pass as a model *@
+    @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.athlete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.average_heartrate)
+        </th>
+        <th></th>
+    </tr>*@
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.athlete.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.average_heartrate)
+            </td>
+
+        </tr>
+    }
+
+</table>

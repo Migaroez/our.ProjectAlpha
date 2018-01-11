@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<h2>Index</h2>
+@Html.Action("Index","Strava")
+
+<h2>IndexAsync</h2>
+@Html.Action("IndexAsync", "Strava")
+
+<h2>IndexTest</h2>
+@Html.Action("IndexTest", "Strava")
